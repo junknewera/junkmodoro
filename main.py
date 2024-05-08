@@ -12,11 +12,17 @@ class Pomodoro:
     def start_timer(self):
         for _ in range(self.focus_sessions):
             if not self.is_focus:
-                self.timer(self.break_seconds, "Break time")
-                self.is_focus = True
-            self.timer(self.focus_seconds, "Focus time")
-            self.is_focus = False
+                self.breaktime()
+            self.focustime()
         print("Nice work!")
+
+    def focustime(self):
+        self.timer(self.focus_seconds, "Focus time")
+        self.is_focus = False
+
+    def breaktime(self):
+        self.timer(self.break_seconds, "Break time")
+        self.is_focus = True
 
     @staticmethod
     def timer(total_seconds, name):
