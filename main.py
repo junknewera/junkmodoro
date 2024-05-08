@@ -31,7 +31,7 @@ class Pomodoro:
             minutes = int(sec / 60) % 60
             seconds = sec % 60
             print(f"{name}: {hours:02}:{minutes:02}:{seconds:02}")
-            time.sleep(0.05)
+            time.sleep(1)
 
 
 def main():
